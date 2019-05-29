@@ -1,0 +1,174 @@
+
+Discarded input sections
+
+ .eh_frame      0x0000000000000000       0x74 mmlplay.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+ .eh_frame      0x0000000000000000       0x5c /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+ .eh_frame      0x0000000000000000       0x58 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+ .eh_frame      0x0000000000000000       0x98 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+ .eh_frame      0x0000000000000000       0x38 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+ .eh_frame      0x0000000000000000      0x264 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD mmlplay.o
+LOAD api_link.o
+LOAD alloca.o
+LOAD bmp.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+LOAD /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o
+
+.head           0x0000000000000000       0x24
+                0x0000000000000000        0x4 LONG 0x40000
+                0x0000000000000004        0x4 LONG 0x69726148
+                0x0000000000000008        0x4 LONG 0x0
+                0x000000000000000c        0x4 LONG 0x5000
+                0x0000000000000010        0x4 LONG 0xe5 SIZEOF (.data)
+                0x0000000000000014        0x4 LONG 0x300f LOADADDR (.data)
+                0x0000000000000018        0x4 LONG 0xe9000000
+                0x000000000000001c        0x4 LONG 0x10 (HariMain - 0x20)
+                0x0000000000000020        0x4 LONG 0x6000
+
+.text           0x0000000000000030     0x2fdf
+ *(.text)
+ .text          0x0000000000000030      0xaea mmlplay.o
+                0x0000000000000030                HariMain
+                0x0000000000000a9d                wait_timer
+                0x0000000000000aeb                app_end
+ *fill*         0x0000000000000b1a        0x6 
+ .text          0x0000000000000b20      0x21b api_link.o
+                0x0000000000000b20                api_putchar
+                0x0000000000000b2c                api_putstr
+                0x0000000000000b3a                api_end
+                0x0000000000000b42                api_gen_window
+                0x0000000000000b64                api_putstr_window
+                0x0000000000000b8c                api_boxfill_window
+                0x0000000000000bb4                api_init_memman
+                0x0000000000000bd5                api_malloc
+                0x0000000000000bea                api_mfree
+                0x0000000000000c03                api_point_window
+                0x0000000000000c21                api_refresh_window
+                0x0000000000000c43                api_drawline_window
+                0x0000000000000c6b                api_close_window
+                0x0000000000000c79                api_keyinput
+                0x0000000000000c85                api_alloc_timer
+                0x0000000000000c8d                api_init_timer
+                0x0000000000000c9f                api_set_timer
+                0x0000000000000cb1                api_free_timer
+                0x0000000000000cbf                api_beep
+                0x0000000000000ccb                api_fopen
+                0x0000000000000cd9                api_fclose
+                0x0000000000000ce5                api_fseek
+                0x0000000000000cfb                api_fsize
+                0x0000000000000d0b                api_fread
+                0x0000000000000d21                api_get_command
+                0x0000000000000d33                api_check_langmode
+ *fill*         0x0000000000000d3b        0x5 
+ .text          0x0000000000000d40        0x9 alloca.o
+                0x0000000000000d40                __alloca
+ .text          0x0000000000000d49      0x388 bmp.o
+                0x0000000000000d49                info_BMP
+                0x0000000000000e0b                decode0_BMP
+ .text          0x00000000000010d1       0xa2 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+                0x00000000000010d1                sprintf
+ .text          0x0000000000001173      0x13f /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+                0x0000000000001173                dec2asc
+                0x000000000000122b                hex2asc
+ .text          0x00000000000012b2       0x2a /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+                0x00000000000012b2                min
+                0x00000000000012c7                max
+ .text          0x00000000000012dc      0x10e /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+                0x00000000000012dc                printf
+ .text          0x00000000000013ea       0x1f /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+                0x00000000000013ea                putchar
+ .text          0x0000000000001409      0x249 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+                0x0000000000001409                strcmp
+                0x00000000000014a5                strncmp
+                0x0000000000001545                strlen
+                0x000000000000156b                strtol
+ .text          0x0000000000001652       0x31 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+                0x0000000000001652                malloc
+ .text          0x0000000000001683       0x33 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+                0x0000000000001683                mfree
+ .text          0x00000000000016b6        0xe /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+                0x00000000000016b6                exit
+ .text          0x00000000000016c4     0x194b /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o
+                0x00000000000016c4                info_JPEG
+                0x0000000000001752                decode0_JPEG
+                0x00000000000017dd                get_bits
+                0x00000000000018e6                jpeg_sof
+                0x0000000000001af8                jpeg_dqt
+                0x0000000000001cac                jpeg_dht
+                0x0000000000001f60                jpeg_init
+                0x00000000000022ad                jpeg_decode_init
+                0x00000000000023df                jpeg_huff_decode
+                0x00000000000024bb                jpeg_idct_init
+                0x00000000000026c7                jpeg_idct
+                0x00000000000027ac                jpeg_get_value
+                0x0000000000002815                jpeg_decode_huff
+                0x00000000000029e1                jpeg_mcu_bitblt
+                0x0000000000002a81                jpeg_decode_mcu
+                0x0000000000002bbb                jpeg_decode_yuv
+                0x0000000000002e1c                jpeg_decode
+
+.data           0x0000000000005000       0xe5 load address 0x000000000000300f
+ *(.data)
+ .data          0x0000000000005000       0x50 mmlplay.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+ .data          0x0000000000005050        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o
+ *(.rodata*)
+ .rodata        0x0000000000005050       0x95 mmlplay.o
+ *(.bss)
+ .bss           0x00000000000050e5        0x0 mmlplay.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+ .bss           0x00000000000050e5        0x0 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o
+
+/DISCARD/
+ *(.eh_frame)
+OUTPUT(mmlplay.hrb binary)
+
+.comment        0x0000000000000000       0xc6
+ .comment       0x0000000000000000       0x12 mmlplay.o
+ .comment       0x0000000000000012       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccmom156.o
+ .comment       0x0000000000000024       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cchwUwKv.o
+ .comment       0x0000000000000036       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccesfKgj.o
+ .comment       0x0000000000000048       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc3ieNCA.o
+ .comment       0x000000000000005a       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc2Qnzuv.o
+ .comment       0x000000000000006c       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc9wC9Qp.o
+ .comment       0x000000000000007e       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cccqjC5O.o
+ .comment       0x0000000000000090       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccOHXb1i.o
+ .comment       0x00000000000000a2       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//ccQh5PmU.o
+ .comment       0x00000000000000b4       0x12 /var/folders/pr/dqyg2df11l5gpmmzgpnjwxtw0000gn/T//cc8xpWuZ.o

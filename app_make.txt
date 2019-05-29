@@ -1,0 +1,22 @@
+LIB_LIST = ../applib/sprintf.c ../applib/dec_hex.c ../applib/math.c ../applib/printf.c ../applib/putchar.c ../applib/str.c ../applib/malloc.c ../applib/mfree.c ../applib/exit.c ../applib/jpeg.c
+AS_ELF = nasm -f elf
+CC = i386-elf-gcc -fno-builtin
+CC_APP = i386-elf-gcc -m32 -march=i486 -nostdlib -fno-builtin -T ../app_har.ld
+LD = i386-elf-ld
+
+# make application file (.hrb)
+${APP}.hrb: ${APP}.c api_link.o alloca.o bmp.o ../app_har.ld ${LIB_LIST}
+	cp ../applib/hrbstd.h .
+	$(CC) -o ${APP}.o -c ${APP}.c
+	$(CC_APP) -o ${APP}.hrb api_link.o alloca.o bmp.o ${APP}.o ${LIB_LIST}
+
+# .o
+api_link.o: ../applib/api_link.asm
+	$(AS_ELF) -o api_link.o ../applib/api_link.asm
+
+alloca.o: ../applib/alloca.asm
+	$(AS_ELF) -o alloca.o ../applib/alloca.asm
+
+bmp.o: ../applib/bmp.asm
+	$(AS_ELF) -o bmp.o ../applib/bmp.asm
+
